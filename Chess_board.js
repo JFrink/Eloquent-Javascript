@@ -1,14 +1,22 @@
-var string = ""
+var string = "";
+var size = 8;
 
-for (i = 0; i < 8; i++) {
-  for (r = 0; r < 8; r++) {
-	if (r % 2 == 0) {
-      string += "#"
-      //console.log(string);
-    } else {
-      string += " "
-      //console.log(string);
-  	}
+for (i = 0; i < size; i++) {
+  for (r = 0; r < size; r++) {
+    if (i % 2 == 0) {
+		if (r % 2 == 0) {
+      		string += "#";
+    	} else {
+      		string += " ";
+        }
+  	} else {
+      if (r % 2 == 0) {
+        string += " ";
+      }
+      else {
+        string += "#"
+      }
+    }
   }
   string += "\n"
 }
